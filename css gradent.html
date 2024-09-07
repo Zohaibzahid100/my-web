@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
+</head>
+<style>
+    * {
+        margin: 0%;
+        padding: 0%;
+        box-sizing: borde
+    }
+
+    .body {
+        background-color: rgb(75, 74, 74);
+        color: white;
+    }
+
+    .box {
+        width: 100%;
+        border: 1px solid black;
+        height: 300px;
+    }
+
+    .perant {
+        width: 100%;
+        margin-top: 2rem;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+
+    .input {
+        height: 100px;
+        width: 33.33%;
+
+    }
+</style>
+
+<body class="body">
+
+    <h1 style="width: 100%; text-align: center; "> CSS GREADIENT</h1>
+    <div id="css-gradient" class="box"></div>
+
+    <div class="perant container">
+        <div style="display: flex; width: 100%; justify-content: space-between;">
+            <p id="text1" style="font-size: 20px; font-weight: bold; "></p>
+            <p id="text2" style="font-size: 20px; font-weight: bold; "></p>
+            <p id="text3" style="font-size: 20px; font-weight: bold; "></p>
+        </div>
+ 
+        <input type="color" id="color-input" class="input">
+        <input type="color" id="color-input1" class="input">
+        <input type="color" id="color-input2" class="input">
+        <div style="width: 100%;padding-top: 2rem;">
+            <button id="Linear-btn" style="width: 20%; height: 50px;border:1px solid black;  background-color:rgb(31, 31, 255); color:white;">
+                LINNEAR</button>
+            <button id="readial-btm" style="width: 20%;height: 50px;border: 1px solid black; background-color: white; color: black;"> RADIAL
+            </button>
+        </div>
+    
+
+
+    <script>
+        document.getElementById('Linear-btn').addEventListener('click', function () {
+            let color = document.getElementById('color-input');
+            let color1 = document.getElementById('color-input1');
+            let color2 = document.getElementById('color-input2')
+            let gradient = document.getElementById('css-gradient')
+            gradient.style.background = 'linear-gradient(to right, ' + color.value + ' 20%, ' + color1.value + ' 70% ,' + color2.value + ' 100% )';
+        });
+        document.getElementById('readial-btm').addEventListener('click', function () {
+            let color = document.getElementById('color-input');
+            let color1 = document.getElementById('color-input1');
+            let color2 = document.getElementById('color-input2')
+            let gradient = document.getElementById('css-gradient')
+            gradient.style.background = 'radial-gradient(circle, ' + color.value + ' 20%, ' + color1.value + ' 70% ,' + color2.value + ' 100% )';
+        });
+
+        let color = document.getElementById('color-input')
+        let color1 = document.getElementById('color-input1');
+        let color2 = document.getElementById('color-input2');
+        let color_number = document.getElementById('text1');
+        let color_number1 = document.getElementById('text2');
+        let color_number2 = document.getElementById('text3')
+        color.addEventListener('input', function () {
+            color_number.innerHTML = color.value;
+        });
+
+        color1.addEventListener('input', function () {
+            color_number1.innerHTML = color1.value;
+        });
+
+        color2.addEventListener('input', function () {
+            color_number2.innerHTML = color2.value;
+        });
+
+
+        
+    </script>
+</body>
+</html>

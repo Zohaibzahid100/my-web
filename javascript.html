@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let name = "zohaib";
+        let Maths = 60;
+        let English = 50;
+        let Urdu = 30;
+        let pst = 70;
+        let totalmarks = Maths + English + Urdu +  pst;
+        let parcent = totalmarks /300*100;
+        document.write("<p>Name :" + name + "</p>" );
+        document.write("<p>Maths :" + Maths + "</p>" );
+        document.write("<p>English :" + English + "</p>" );
+        document.write("<p>Urdu :" + Urdu + "</p>" );
+        document.write("<p>pst :" + pst + "</p>" );
+        document.write("<p>totalmarks :" + totalmarks + "</p>" );
+        document.write("<p>parcentage :" + Math.round(parcent) + "</p>" );
+        let grade = '';
+        if(parcent >=90){
+            grade = "Grade : A+1";
+        }
+        else if(parcent >=80){
+            grade = "Grade : A1";
+        }
+        else if(parcent >=70){
+            grade = "Grade : A";
+        }
+        else if(parcent >=60){
+            grade = "Grade : B";
+        }
+        else if(parcent >=50){
+            grade = "Grade : C";
+        }
+        else if(parcent >=40){
+            grade = "Grade : D";
+        }
+        else{
+           grade = "Grade : F";
+        }
+        document.write(grade + "<br>");
+
+let tab = prompt( "num");
+for( let z = 1; z <=10 ; z++){
+    document.write(  tab + "x" + z +"=" + tab*z + "<br>");
+}
+
+    </script>
+</body>
+</html>
